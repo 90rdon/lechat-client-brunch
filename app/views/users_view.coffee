@@ -8,7 +8,6 @@ module.exports = class UsersView extends View
   initialize: ->
   
   after_render: ->
-    console.log 'rendered'
     container = @$('.users').first().empty()
     @collection.each (u) ->
       view = new UserView({model: u})

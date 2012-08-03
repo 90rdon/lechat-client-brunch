@@ -3,7 +3,7 @@ exports.config =
 
   # Edit the next line to change default build path.
   paths:
-    public: 'public'
+    public: 'server/public'
 
   files:
     javascripts:
@@ -48,6 +48,8 @@ exports.config =
   #   # Path to your server node.js module.
   #   # If it's commented-out, brunch will use built-in express.js server.
   #  path: 'server.coffee'
-    port: 3333
+  #  port: 3333
   #   # Run even without `--server` option?
+  #  run: yes
+    path: 'server/server.coffee'
     run: yes

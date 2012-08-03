@@ -169,9 +169,11 @@
 
   application = require('application');
 
-  $(function() {
-    return application.initialize('localhost', 3000);
-  });
+  module.exports = function(host, port) {
+    return $(function() {
+      return application.initialize(host, port);
+    });
+  };
 
 }).call(this);
 
@@ -646,7 +648,7 @@ function program2(depth0,data) {
   stack1 = foundHelper || depth0.name;
   if(typeof stack1 === functionType) { stack1 = stack1.call(depth0, { hash: {} }); }
   else if(stack1=== undef) { stack1 = helperMissing.call(depth0, "name", { hash: {} }); }
-  buffer += escapeExpression(stack1) + "</div>\n    ";
+  buffer += escapeExpression(stack1) + "</div>\n    <p>to try the chat, <a href='' target='_blank'>open it in another window</a> and choose another user</p>\n    ";
   return buffer;}
 
 function program4(depth0,data) {
@@ -786,7 +788,6 @@ function program5(depth0,data) {
 
     UserView.prototype.after_render = function() {
       var _this = this;
-      console.log(this.$('input.choose'));
       return this.$('input.choose').click(function() {
         console.log('click');
         return application.set_user(_this.model);
@@ -828,7 +829,6 @@ function program5(depth0,data) {
 
     UsersView.prototype.after_render = function() {
       var container;
-      console.log('rendered');
       container = this.$('.users').first().empty();
       return this.collection.each(function(u) {
         var view;
