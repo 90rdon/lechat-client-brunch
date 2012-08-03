@@ -1,0 +1,19 @@
+<div id="content">
+  {{#if user}}
+    {{#with user}}
+    <div id="topbar">Logged in as {{name}}</div>
+    {{/with}}
+  {{/if}}
+  {{#if other_users}}
+  Who do you want to chat with?
+  <div class='users'>
+    {{#each other_users}}
+      <div class='user'>
+        <input id='chat-with-user-{{id}}' type='button' value='Chat with {{name}}' />
+      </div>
+    {{/each}}
+  </div>
+  {{/if}}
+  <div class='chat-windows'>
+  </div>
+</div>
