@@ -23,3 +23,5 @@ This is a client application for `leChat` server written in Coffeescript with Ba
 ## deploying on Heroku
 
   * if you have installed the Heroku toolbelt, the app can be launched with `foreman`. Run `foreman start` to run the app on port 5000.
+  
+  * follow [these instructions](https://devcenter.heroku.com/articles/nodejs) to get the app up and running on Heroku.
