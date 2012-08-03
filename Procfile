@@ -1,1 +1,1 @@
-web: brunch watch
+web: coffee server/start.coffee
