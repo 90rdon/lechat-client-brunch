@@ -1,1 +1,1 @@
-web: coffee server/start.coffee
+web: node server/start.js
